@@ -7,27 +7,28 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header class="site-header">
-		<div class="container header-content">
-			<a href="Home.html" class="logo">Brienn Ashford Ducusin</a>
-			<nav class="nav-links">
-				<a href="Home.html" class="nav-link">Home</a>
-				<a href="Projects.html" class="nav-link">Projects</a>
-				<a href="Skills.html" class="nav-link active">Skills</a>
-				<a href="Contact.html" class="nav-link">Contact</a>
+	<header class="main-top-nav">
+		<div class="page-bounds nav-inner-wrap">
+			<a href="Home.html" class="brand-name">Brienn Ashford Ducusin</a>
+			<nav class="top-menu">
+				<a href="Home.html" class="menu-item">Home</a>
+				<a href="Projects.html" class="menu-item">Projects</a>
+				<a href="Skills.html" class="menu-item current-page">Skills</a>
+				<a href="Contact.html" class="menu-item">Contact</a>
 			</nav>
 		</div>
 	</header>
 
-	<main class="container">
+	<main class="page-bounds main-content-area">
 		<section>
-			<span class="section-label">Skills</span>
-			<h1 class="page-title wide">A practical toolkit for building durable product experiences.</h1>
+			<span class="highlight-label">Skills</span>
+			<h1 class="hero-heading expanded">A practical toolkit for building durable product experiences.</h1>
 		</section>
 
-		<div class="skills-grid">
-			<div class="skill-card bg-blue">
-				<h3 class="skill-card-title">HTML Foundation</h3>
+		<!-- skill boxes -->
+		<div class="skills-masonry">
+			<div class="skill-cat-box bg-tint-blue">
+				<h3 class="skill-title">HTML Foundation</h3>
 				<ul class="skill-list">
 					<li>Semantic elements</li>
 					<li>Landmark roles</li>
@@ -36,8 +37,8 @@
 				</ul>
 			</div>
 
-			<div class="skill-card bg-green">
-				<h3 class="skill-card-title">CSS Foundation</h3>
+			<div class="skill-cat-box bg-tint-green">
+				<h3 class="skill-title">CSS Foundation</h3>
 				<ul class="skill-list">
 					<li>Flexbox</li>
 					<li>CSS Grid</li>
@@ -46,8 +47,8 @@
 				</ul>
 			</div>
 
-			<div class="skill-card bg-purple">
-				<h3 class="skill-card-title">Accessibility</h3>
+			<div class="skill-cat-box bg-tint-purple">
+				<h3 class="skill-title">Accessibility</h3>
 				<ul class="skill-list">
 					<li>ARIA labels</li>
 					<li>Keyboard nav</li>
@@ -56,8 +57,8 @@
 				</ul>
 			</div>
 
-			<div class="skill-card bg-orange">
-				<h3 class="skill-card-title">CSS Homepage</h3>
+			<div class="skill-cat-box bg-tint-orange">
+				<h3 class="skill-title">CSS Homepage</h3>
 				<ul class="skill-list">
 					<li>Mobile-first design</li>
 					<li>Breakpoints</li>
@@ -66,8 +67,8 @@
 				</ul>
 			</div>
 
-			<div class="skill-card bg-pink">
-				<h3 class="skill-card-title">Tools</h3>
+			<div class="skill-cat-box bg-tint-pink">
+				<h3 class="skill-title">Tools</h3>
 				<ul class="skill-list">
 					<li>VS Code</li>
 					<li>Git & GitHub</li>
@@ -76,8 +77,8 @@
 				</ul>
 			</div>
 
-			<div class="skill-card bg-yellow">
-				<h3 class="skill-card-title">Time</h3>
+			<div class="skill-cat-box bg-tint-yellow">
+				<h3 class="skill-title">Time</h3>
 				<ul class="skill-list">
 					<li>FreeCodeCamp RWD</li>
 					<li>Project-based learning</li>
@@ -87,32 +88,33 @@
 			</div>
 		</div>
 
+		<!-- mini project view -->
 		<section style="margin-top: 64px;">
 			<h2 style="color: #6A7282; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 20px;">Projects completed through FreeCodeCamp's Responsive Web Design coursework</h2>
 			
-			<div class="mini-project-list">
-				<div class="mini-project-item">
-					<span class="mini-project-name">Survey Form</span>
-					<span class="tag tag-blue">HTML & CSS</span>
+			<div class="mini-fcc-list">
+				<div class="mini-fcc-row">
+					<span class="mini-fcc-title">Survey Form</span>
+					<span class="skill-badge badge-blue">HTML & CSS</span>
 				</div>
-				<div class="mini-project-item">
-					<span class="mini-project-name">Tribute Page</span>
-					<span class="tag tag-green">HTML & CSS</span>
+				<div class="mini-fcc-row">
+					<span class="mini-fcc-title">Tribute Page</span>
+					<span class="skill-badge badge-green">HTML & CSS</span>
 				</div>
-				<div class="mini-project-item">
-					<span class="mini-project-name">Technical Documentation Page</span>
-					<span class="tag tag-purple">HTML & CSS</span>
+				<div class="mini-fcc-row">
+					<span class="mini-fcc-title">Technical Documentation Page</span>
+					<span class="skill-badge badge-purple">HTML & CSS</span>
 				</div>
-				<div class="mini-project-item">
-					<span class="mini-project-name">Product Landing Page</span>
-					<span class="tag tag-orange">HTML & CSS</span>
+				<div class="mini-fcc-row">
+					<span class="mini-fcc-title">Product Landing Page</span>
+					<span class="skill-badge badge-orange">HTML & CSS</span>
 				</div>
 			</div>
 		</section>
 	</main>
 
-	<footer class="site-footer container">
-		<div class="footer-content">
+	<footer class="bottom-footer page-bounds">
+		<div class="footer-inner">
 			<span>Brienn Ashford Ducusin — frontend developer</span>
 			<span>Built with HTML, CSS, and practical design.</span>
 		</div>

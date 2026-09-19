@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+/* Basic resets */
 *
 {
 	box-sizing: border-box;
@@ -11,6 +12,7 @@ body
 {
 	font-family: 'Inter', sans-serif;
 	color: #101828;
+	/* background-color: #fafafa; testing off-white */
 	background: #ffffff;
 	line-height: 1.5;
 	display: flex;
@@ -29,30 +31,33 @@ ul
 	list-style: none;
 }
 
-.container
+/* Layout boundaries */
+.page-bounds
 {
 	width: 100%;
 	max-width: 1024px;
 	margin: 0 auto;
 	padding: 0 24px;
+	/* border: 1px solid red; debug layout */
 }
 
-main
+.main-content-area
 {
 	flex-grow: 1;
 	padding: 64px 0;
 }
 
-.site-header
+/* Top Nav */
+.main-top-nav
 {
 	position: sticky;
 	top: 0;
 	z-index: 100;
 	border-bottom: 1px solid #E5E7EB;
-	background: white;
+	background: #fff;
 }
 
-.header-content
+.nav-inner-wrap
 {
 	height: 56px;
 	display: flex;
@@ -60,41 +65,42 @@ main
 	align-items: center;
 }
 
-.logo
+.brand-name
 {
 	font-size: 14px;
 	font-weight: 600;
 	letter-spacing: 0.35px;
 }
 
-.nav-links
+.top-menu
 {
 	display: flex;
 	gap: 4px;
 }
 
-.nav-link
+.menu-item
 {
 	padding: 6px 12px;
 	border-radius: 4px;
 	font-size: 14px;
 	font-weight: 500;
 	color: #4A5565;
-	transition: background-color 0.2s;
+	transition: background-color 0.2s ease;
 }
 
-.nav-link:hover
+.menu-item:hover
 {
 	background: #F3F4F6;
 }
 
-.nav-link.active
+.menu-item.current-page
 {
 	background: #EFF6FF;
 	color: #1447E6;
 }
 
-.section-label
+/* Typography styles */
+.highlight-label
 {
 	color: #155DFC;
 	font-size: 12px;
@@ -105,7 +111,7 @@ main
 	display: block;
 }
 
-.page-title
+.hero-heading
 {
 	font-size: 36px;
 	font-weight: 700;
@@ -114,7 +120,7 @@ main
 	margin-top: 20px;
 }
 
-.page-title.wide
+.hero-heading.expanded
 {
 	max-width: 976px;
 	font-size: 30px;
@@ -122,14 +128,14 @@ main
 	line-height: 1.2;
 }
 
-.section-title
+.sub-heading
 {
 	font-size: 20px;
 	font-weight: 700;
 	margin-bottom: 12px;
 }
 
-.text-body
+.paragraph-text
 {
 	color: #4A5565;
 	font-size: 14px;
@@ -138,7 +144,8 @@ main
 	max-width: 472px;
 }
 
-.btn-group
+/* Call to Action Buttons */
+.action-buttons
 {
 	display: flex;
 	gap: 12px;
@@ -146,7 +153,7 @@ main
 	margin-bottom: 40px;
 }
 
-.btn
+.ui-btn
 {
 	padding: 10px 20px;
 	border-radius: 4px;
@@ -160,27 +167,28 @@ main
 	font-family: inherit;
 }
 
-.btn-primary
+.btn-solid-blue
 {
 	background: #155DFC;
 	color: white;
 }
 
-.btn-outline
+.btn-ghost
 {
 	background: transparent;
 	border: 1px solid #D1D5DC;
 	color: #364153;
 }
 
-.link-primary
+.text-link
 {
 	color: #155DFC;
 	font-size: 14px;
 	font-weight: 500;
 }
 
-.projects-header
+/* Project Feed */
+.projects-header-row
 {
 	display: flex;
 	justify-content: space-between;
@@ -189,7 +197,7 @@ main
 	padding-top: 80px;
 }
 
-.projects-label
+.projects-subtitle
 {
 	color: #6A7282;
 	font-size: 14px;
@@ -198,14 +206,15 @@ main
 	letter-spacing: 1.40px;
 }
 
-.card-grid
+.projects-layout
 {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
 }
 
-.card
+/* TODO: add hover effects to project cards later */
+.proj-box
 {
 	background: white;
 	border: 1px solid #E5E7EB;
@@ -213,21 +222,21 @@ main
 	padding: 24px;
 }
 
-.card-header
+.proj-top-area
 {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 16px;
 }
 
-.card-title
+.proj-title
 {
 	font-size: 16px;
 	font-weight: 700;
 	margin-bottom: 4px;
 }
 
-.card-desc
+.proj-info
 {
 	color: #4A5565;
 	font-size: 14px;
@@ -235,7 +244,7 @@ main
 	margin-bottom: 16px;
 }
 
-.card-footer-link
+.external-link-btn
 {
 	color: #6A7282;
 	font-size: 12px;
@@ -245,7 +254,8 @@ main
 	display: inline-block;
 }
 
-.tag
+/* Tags */
+.skill-badge
 {
 	padding: 2px 8px;
 	border-radius: 9999px;
@@ -253,31 +263,11 @@ main
 	font-weight: 500;
 }
 
-.tag-blue
-{
-	background: #DBEAFE;
-	color: #1447E6;
-}
-
-.tag-green
-{
-	background: #DCFCE7;
-	color: #008236;
-}
-
-.tag-purple
-{
-	background: #F3E8FF;
-	color: #8200DB;
-}
-
-.tag-orange
-{
-	background: #FFEDD4;
-	color: #CA3500;
-}
-
-.tag-gray
+.badge-blue { background: #DBEAFE; color: #1447E6; }
+.badge-green { background: #DCFCE7; color: #008236; }
+.badge-purple { background: #F3E8FF; color: #8200DB; }
+.badge-orange { background: #FFEDD4; color: #CA3500; }
+.badge-gray
 {
 	background: #F3F4F6;
 	color: #4A5565;
@@ -285,7 +275,7 @@ main
 	font-weight: 400;
 }
 
-.tags-row
+.badge-cluster
 {
 	display: flex;
 	gap: 8px;
@@ -293,7 +283,8 @@ main
 	flex-wrap: wrap;
 }
 
-.skills-grid
+/* Skills Masonry Layout */
+.skills-masonry
 {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -301,14 +292,14 @@ main
 	margin-top: 64px;
 }
 
-.skill-card
+.skill-cat-box
 {
 	padding: 20px;
 	border-radius: 12px;
 	border: 1px solid transparent;
 }
 
-.skill-card-title
+.skill-title
 {
 	font-size: 14px;
 	font-weight: 600;
@@ -340,43 +331,16 @@ main
 	border-radius: 50%;
 }
 
-.bg-blue
-{
-	background: #EFF6FF;
-	border-color: #BEDBFF;
-}
+/* tint colors for skill boxes */
+.bg-tint-blue { background: #EFF6FF; border-color: #BEDBFF; }
+.bg-tint-green { background: #F0FDF4; border-color: #B9F8CF; }
+.bg-tint-purple { background: #FAF5FF; border-color: #E9D4FF; }
+.bg-tint-orange { background: #FFF7ED; border-color: #FFD6A8; }
+.bg-tint-pink { background: #FDF2F8; border-color: #FCCEE8; }
+.bg-tint-yellow { background: #FEFCE8; border-color: #FFF085; }
 
-.bg-green
-{
-	background: #F0FDF4;
-	border-color: #B9F8CF;
-}
-
-.bg-purple
-{
-	background: #FAF5FF;
-	border-color: #E9D4FF;
-}
-
-.bg-orange
-{
-	background: #FFF7ED;
-	border-color: #FFD6A8;
-}
-
-.bg-pink
-{
-	background: #FDF2F8;
-	border-color: #FCCEE8;
-}
-
-.bg-yellow
-{
-	background: #FEFCE8;
-	border-color: #FFF085;
-}
-
-.contact-layout
+/* Contact Area */
+.contact-split-view
 {
 	display: flex;
 	gap: 64px;
@@ -384,31 +348,31 @@ main
 	flex-wrap: wrap;
 }
 
-.contact-info
+.contact-details-col
 {
 	flex: 1;
 	min-width: 300px;
 }
 
-.info-row
+.contact-data-row
 {
 	display: flex;
 	margin-bottom: 12px;
 	font-size: 14px;
 }
 
-.info-label
+.data-label
 {
 	width: 112px;
 	color: #99A1AF;
 }
 
-.info-value
+.data-value
 {
 	color: #364153;
 }
 
-.contact-form
+.inquiry-form
 {
 	flex: 1;
 	min-width: 300px;
@@ -418,21 +382,21 @@ main
 	gap: 16px;
 }
 
-.form-group
+.input-wrapper
 {
 	display: flex;
 	flex-direction: column;
 	gap: 6px;
 }
 
-.form-label
+.input-label
 {
 	font-size: 12px;
 	font-weight: 500;
 	color: #364153;
 }
 
-.form-control
+.text-field
 {
 	padding: 10px 12px;
 	border: 1px solid #D1D5DC;
@@ -442,18 +406,18 @@ main
 	width: 100%;
 }
 
-.form-control::placeholder
+.text-field::placeholder
 {
 	color: rgba(16, 24, 40, 0.50);
 }
 
-textarea.form-control
+textarea.text-field
 {
 	min-height: 121px;
 	resize: vertical;
 }
 
-.btn-submit
+.submit-action
 {
 	width: 100%;
 	padding: 10px;
@@ -466,12 +430,13 @@ textarea.form-control
 	margin-top: 8px;
 }
 
-.site-footer
+/* Footer styling */
+.bottom-footer
 {
 	padding: 80px 0 0;
 }
 
-.footer-content
+.footer-inner
 {
 	border-top: 1px solid #F3F4F6;
 	padding: 24px 0;
@@ -481,14 +446,15 @@ textarea.form-control
 	font-size: 12px;
 }
 
-.about-section
+/* Misc Utilities */
+.about-me-block
 {
 	border-top: 1px solid #F3F4F6;
 	padding-top: 48px;
 	margin-top: 80px;
 }
 
-.learning-box
+.focus-area-box
 {
 	background: #EFF6FF;
 	padding: 24px;
@@ -496,7 +462,7 @@ textarea.form-control
 	margin-top: 24px;
 }
 
-.learning-box ul
+.focus-area-box ul
 {
 	display: flex;
 	flex-direction: column;
@@ -504,7 +470,7 @@ textarea.form-control
 	margin-top: 12px;
 }
 
-.learning-box li
+.focus-area-box li
 {
 	display: flex;
 	align-items: center;
@@ -513,7 +479,7 @@ textarea.form-control
 	color: #364153;
 }
 
-.learning-box li::before
+.focus-area-box li::before
 {
 	content: '';
 	width: 6px;
@@ -522,13 +488,13 @@ textarea.form-control
 	border-radius: 50%;
 }
 
-.mini-project-list
+.mini-fcc-list
 {
 	display: flex;
 	flex-direction: column;
 }
 
-.mini-project-item
+.mini-fcc-row
 {
 	display: flex;
 	justify-content: space-between;
@@ -537,7 +503,7 @@ textarea.form-control
 	border-bottom: 1px solid #F3F4F6;
 }
 
-.mini-project-name
+.mini-fcc-title
 {
 	display: flex;
 	align-items: center;
@@ -546,7 +512,7 @@ textarea.form-control
 	color: #364153;
 }
 
-.mini-project-name::before
+.mini-fcc-title::before
 {
 	content: '';
 	width: 8px;
